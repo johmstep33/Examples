@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+</head>
+<body>
+    <div id="everything">
+    <h1>A heading!</h1>
+    <p>Here's some text!</p>
+    <p>Here's a second set of text!</p>
+    <div class="holder">
+    <ul>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+    </ul>
+    </div>
+    <div class="holder">
+    <ol>
+    <li>List Item 4</li>
+    <li>List Item 5</li>
+    <li>List Item 6</li>
+    </ol>
+    </div>
+    <div id="change-me">This part needs to change!</div>
+    <div id="secret">We should hide this!</div>
+    </div>
+  <script>
+    $('h1').css('color','blue');
+    $('body').css('background-color','red');
+    $('#everything').css('font-size','200%');
+    $('.holder').css('border','solid black 2px');
+    $('ul li').css('font-weight','bold').css('color','yellow');
+    $('h1').next('p').css('color','green');
+    $('#secret').css('display', 'none');
+    $('#secret').css('display','block');
+    $('#change-me').text('I AM NEW TEXT!');
+    $('#change-me').append(' I AM NEWER TEXT!!');
+    $('#change-me').html("<p>I am replacing the new and newer text</p>");
+    $('#change-me').append('<p>I am a newer paragraph!</p>');
+    $('li').text('I am a new list item!');
+    $('li').append(' I am a bonus sentence!');
+    //$('#everything').append('<ol><li>NUMBER 1</li><li>NUMBER 2</li><li>NUMBER 3</li></ol>');
+    $('ul li:first-child').text('First new sentence');
+    $('ul li:nth-child(2)').text('Second new sentence');
+    $('ul li:nth-child(3)').text('Third new sentence');
+    $('ol li:first-child').text('Donuts Rock!');
+    $('ol li:nth-child(2)').text('A donut a day!');
+    $('ol li:nth-child(3)').text('Keeps you diabetic!');
+    $('#everything').append('<ol><li>NUMBER 1</li><li>NUMBER 2</li><li>NUMBER 3</li></ol>');
+  </script>
+</body>
+</html>

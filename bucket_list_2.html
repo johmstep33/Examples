@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+</head>
+<body>
+  <div id='bucket_head'><h1>BUCKET LIST</h1></div>
+  <div id= "bucket"></div>
+
+  <div id='recipe_head'><h1>EASY RECIPE</h1></div>
+  <div id= "recipe"></div>
+
+    <script>
+      var bucketList = [];
+      bucketList [0] = "Ride a hotair balloon"
+      bucketList [1] = "Backpack all over Ireland"
+      bucketList [2] = "Live in another country"
+      bucketList [3] = "Fall in Love"
+      bucketList.push('Move to New York City');
+      bucketList.push('Become an Art Director');
+      bucketList.unshift('Own a Pug');
+      bucketList.unshift('Visit every continent');
+      bucketList.pop();
+      var dyingWish = ['Become an Art Director'];
+      bucketList.shift();
+      var doItNow = ["Visit every continent"];
+
+      var recipe = [];
+      recipe [0] = "butter your bread on the outside";
+      recipe [1] = "place your cheese between your buttered bread";
+      recipe [2] = "turn the grill on";
+      recipe [3] = "slap sandwich on grill and watch it";
+      recipe [4] = "eat it!";
+      recipe [5] = "take a nap!";
+
+
+      function append_strings(array, target_div) {
+        var i = 0;
+        while (i <array.length) {
+          $(target_div).append('<p>' + array[i] + '</p>');
+          i++;
+        }
+      }
+
+      append_strings(bucketList, "#bucket");
+      append_strings(recipe, "#recipe");
+
+    </script>
+</body>
+</html>

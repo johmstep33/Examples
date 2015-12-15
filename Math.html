@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div id="target"></div>
+  <script>
+    var input;
+
+      while( !(input = prompt('Please enter a number larger than zero.')) ){
+          console.log("you didn't write anything, bruh.");
+      }   if (isNaN(input)){
+            console.log ("Eh?");
+          alert("Thant's not a number. Please try again.");
+      } else{
+          document.getElementById("target").innerHTML = "You wrote:" + parseInt(input) + "."
+      }
+  </script>
+
+</body>
+</html>

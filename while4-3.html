@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+<body>
+  <div id='target'></div>
+  <script>
+  var n = 10;
+  var string = "";
+
+  while (n <= 8) {
+    if (n !== 8) {
+      if (n % 2 === 0)
+      string += "<p class = 'even'>" + n +"</p><hr>";
+    } else {
+      string += "<p class='odd'>" + n +"</p><hr>";
+    }
+  } else {
+      if (n % 2 === 0){
+        string += '<p class = "even">'+n+'</p>';
+      } else {
+        string += '<p class = "odd">'+n+"</p>";
+      }
+  }
+      n++;
+  }
+document.querySelector('#target').innerHTML = string;
+  </script>
+</body>
+</html>
